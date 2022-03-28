@@ -23100,7 +23100,9 @@ with pkgs;
 
   golint = callPackage ../development/tools/golint { };
 
-  golangci-lint = callPackage ../development/tools/golangci-lint { };
+  golangci-lint = callPackage ../development/tools/golangci-lint {
+    buildGoModule = buildGo118Module;
+  };
 
   gocyclo = callPackage ../development/tools/gocyclo { };
 
